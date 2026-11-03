@@ -1,0 +1,9 @@
+project: savantenvs/janus-gateway
+target: sdp_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sdp_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/sdp_fuzzer
+    libfuzzer: true
+    timeout: 5
