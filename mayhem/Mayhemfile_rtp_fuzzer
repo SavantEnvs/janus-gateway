@@ -1,0 +1,9 @@
+project: savantenvs/janus-gateway
+target: rtp_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rtp_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/rtp_fuzzer
+    libfuzzer: true
+    timeout: 5
