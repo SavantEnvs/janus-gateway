@@ -1,0 +1,10 @@
+project: savantenvs/janus-gateway
+target: recordplay_fuzzer-mined-86587c2
+# seed-from: https://app.mayhem.security/savantenvs/janus-gateway/rtp-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/recordplay_fuzzer-mined-86587c2/testsuite
+cmds:
+  - cmd: /mayhem/recordplay_fuzzer
+    libfuzzer: true
+    timeout: 5
